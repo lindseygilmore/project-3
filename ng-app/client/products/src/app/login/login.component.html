@@ -1,3 +1,10 @@
-<input [(ngModel)]="user.email" placeholder="email"/>
-<input [(ngModel)]="user.password" placeholder="password"/>
+
+
+<div id='container'>
+<h1>Login</h1>
+<input id='login-email'[(ngModel)]="user.email" placeholder="email"/>
+<br>
+<input id='login-password'[(ngModel)]="user.password" placeholder="password"/>
+<br>
 <button (click)="login()">Submit</button>
+</div>

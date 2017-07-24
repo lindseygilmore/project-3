@@ -6,12 +6,10 @@
 	height: 700px;
 	width: 375px;
 	display: flex;
-	align-items: center;
-	flex-direction: column;
+	flex-direction: row;
 	margin: 0 auto;
 }
 
-#container h1{
-	margin-top: 50%;
-	margin-bottom: 20%;
+#container h1 {
+	margin: 0 auto;
 }

@@ -6,21 +6,35 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { SearchComponent } from './search/search.component';
+import { DetailComponent } from './detail/detail.component';
 
 
 const routes: Routes = [
 
-  {
+  	{
     path: 'login',
     component: LoginComponent
-  },
+  	},
+
+  	{ 
+  	path: 'search',
+  	component: SearchComponent
+	},
+
+	{ 
+	path: 'detail',
+	component: DetailComponent
+	}
 
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SearchComponent,
+    DetailComponent
     
   ],
   imports: [
