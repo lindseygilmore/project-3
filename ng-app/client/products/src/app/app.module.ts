@@ -6,30 +6,22 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { ListComponent } from './list/list.component';
-import { DetailComponent } from './detail/detail.component';
+
 
 const routes: Routes = [
-  {
-    path: 'list',
-    component: ListComponent
-  },
+
   {
     path: 'login',
     component: LoginComponent
   },
-  {
-    path: 'raincoats/:id',
-    component: DetailComponent
-  }
+
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    ListComponent,
-    DetailComponent
+    LoginComponent
+    
   ],
   imports: [
     BrowserModule,
