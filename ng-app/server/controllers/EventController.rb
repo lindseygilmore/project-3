@@ -1,4 +1,4 @@
-class EventController < Sinatra::Base
+class EventController < ApplicationController
 
 
 get '/' do
