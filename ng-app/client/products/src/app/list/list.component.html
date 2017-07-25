@@ -3,20 +3,22 @@
 
   <table>
     <tr>
+    	<th class='table-row'></th>
       <th class='table-row'>Name</th>
+      
       <th class='table-row'>Venue</th>
       <th class='table-row'>Price</th>
       <th class='table-row'>City</th>
       <th class='table-row'>Date</th>
-      <th class='table-row'>Delete</th>
+      
     </tr>
     <tr *ngFor="let event of events">
+    	<td><img src="{{event.image_url}}" width="30" height="30"></td>
       <td  class='table-row'>{{event.name}}</td>
       <td  class='table-row'>{{event.company_hosting}}</td>
       <td  class='table-row'>{{event.price}}</td>
       <td  class='table-row'>{{event.location}}</td>
       <td  class='table-row'>{{event.event_date}}</td>
-      <td  class='table-row'><button (click)="deleteEvent(event)">Delete</button></td>
     </tr>
   </table>
 </div>
