@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import { DetailComponent } from './detail/detail.component';
-
+import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
 
@@ -25,6 +25,11 @@ const routes: Routes = [
 	{ 
 	path: 'detail',
 	component: DetailComponent
+	},
+
+	{
+	path: 'list',
+	component: ListComponent
 	}
 
 ]
@@ -34,7 +39,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     SearchComponent,
-    DetailComponent
+    DetailComponent,
+    ListComponent
     
   ],
   imports: [
