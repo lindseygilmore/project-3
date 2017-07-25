@@ -19,5 +19,11 @@ class EventController < ApplicationController
 		Event.all.to_json
 	end
 
+	delete '/:id' do
+		id = params[:id]
+		event = Event.find(id)
+		event.destroy
+		Event.all.to_json
+	end
 
 end
