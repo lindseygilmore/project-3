@@ -13,12 +13,15 @@ export class SearchComponent {
 	events: Event[] = [];
 
   	constructor(private http: Http, private router: Router){
-
+  		this.getEvents();
   	}
 
+//get event by keyword. define keyword prior to entry 
+//get event by location (zip code)
 	getEvents(){
-		this.http.get('http://api.eventful.com/rest/events/search?&keyword=zip?key=4fJVC6hcH77RQ5bx').subscribe(response => {
+		this.http.get('http://localhost:9393/events').subscribe(response => {
 		this.events = response.json()
+
 
 		})
 	}
