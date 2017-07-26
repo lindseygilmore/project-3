@@ -36,7 +36,7 @@
     </tr>
 
     <tr *ngFor="let event of events">
-    	<td><img src="{{event.image_url}}" width="20" height="20"></td>
+    	<td (click)="goToEvent(event)"><img src="{{event.image_url}}" width="20" height="20"></td>
       <td  class='table-row'>{{event.name}}</td>
       <td  class='table-row'>{{event.company_hosting}}</td>
       <td  class='table-row'>{{event.price}}</td>

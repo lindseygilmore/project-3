@@ -4,11 +4,13 @@ import { RouterModule, Routes } from '@angular/router'
 import { HttpModule } from '@angular/http'
 import { FormsModule } from '@angular/forms';
 
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import { DetailComponent } from './detail/detail.component';
 import { ListComponent } from './list/list.component';
+
 
 const routes: Routes = [
 
@@ -23,7 +25,7 @@ const routes: Routes = [
 	},
 
 	{ 
-	path: 'detail',
+	path: 'events/:id',
 	component: DetailComponent
 	},
 
@@ -33,6 +35,7 @@ const routes: Routes = [
 	}
 
 ]
+
 
 @NgModule({
   declarations: [
@@ -52,4 +55,10 @@ const routes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
+
+
+
+

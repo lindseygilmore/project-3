@@ -34,8 +34,6 @@ export class DetailComponent implements OnInit {
     this.http.get('http://localhost:9393/events/' + id).subscribe(response =>
       this.event = response.json()
     )
-  }
-
-
+  	}
 
 }

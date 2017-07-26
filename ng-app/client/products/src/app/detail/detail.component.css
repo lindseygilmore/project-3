@@ -1,4 +1,4 @@
-* {
+*{
 	border: 1px solid black;
 }
 
@@ -12,6 +12,10 @@
 }
 
 #container h1{
-	margin-top: 50%;
+	margin-top: 10%;
 	margin-bottom: 20%;
+}
+
+#event-detail:hover {
+	color: white;
 }
