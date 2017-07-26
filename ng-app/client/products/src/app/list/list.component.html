@@ -9,8 +9,13 @@
 <h2>2017-2018</h2>
 </div>
 
+<div id='search'>
+<input placeholder='Search by city'/>
+<button (click)='searchEvents()'>Search</button>
+</div>
 
-<!-- <div id='new-post-container'>
+
+<div id='new-post-container'>
 <input id='newEvent.name' placeholder='Name'/>
 <input id='newEvent.company_hosting' placeholder='Venue'/>
 <input id='newEvent.price' placeholder='Price'/>
@@ -19,10 +24,6 @@
 <input id='newEvent.city_id' placeholder='City_id'/>
 <input id='newEvent.image_url' placeholder='Image URL'/>
 <button (click)='postEvent()'>Add Event</button>
-</div> -->
-<div id='search'>
-<input placeholder='Search by city'/>
-<button (click)='searchEvents()'>Search</button>
 </div>
 
   <table>
@@ -42,7 +43,8 @@
       <td  class='table-row'>{{event.price}}</td>
       <td  class='table-row'>{{event.location}}</td>
       <td  class='table-row'>{{event.event_date}}</td>
-      <button (click)='deleteEvent(event)'>Delete</button>
+      <button (click)='deleteEvent(event)'>Del</button>
+       <button (click)='patchEvent(event)'>Edit</button>
     </tr>
   </table>
 </div>
