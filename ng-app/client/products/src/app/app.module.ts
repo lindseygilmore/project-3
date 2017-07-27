@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { SearchComponent } from './search/search.component';
+import { RegisterComponent } from './register/register.component';
 import { DetailComponent } from './detail/detail.component';
 import { ListComponent } from './list/list.component';
 
@@ -20,8 +20,8 @@ const routes: Routes = [
   	},
 
   	{ 
-  	path: 'search',
-  	component: SearchComponent
+  	path: 'register',
+  	component: RegisterComponent
 	},
 
 	{ 
@@ -41,9 +41,9 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    SearchComponent,
     DetailComponent,
-    ListComponent
+    ListComponent,
+    RegisterComponent
     
   ],
   imports: [

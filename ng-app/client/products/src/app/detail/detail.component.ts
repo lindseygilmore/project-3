@@ -20,10 +20,11 @@ class Event{
   styleUrls: ['./detail.component.css']
 })
 
+
 export class DetailComponent implements OnInit {
   event: Event = new Event();
 
-  constructor(private route: ActivatedRoute, private http: Http) {
+  constructor(private route: ActivatedRoute, private http: Http, private router: Router) {
     let id = this.route.snapshot.params.id;
     this.getEvent(id);
   }
@@ -32,10 +33,15 @@ export class DetailComponent implements OnInit {
   }
 
   getEvent(id){
-    this.http.get('http://localhost:9393/events/' + id).subscribe(response =>
+    this.http.get('http://localhost:9393/events/' + id).subscribe(response => {
       this.event = response.json()
-    )
-  	}
+    })
+  }
+  logout(){
+      window.localStorage.clear();
+    this.router.navigate(['/login'])
+  }
+
 
 
 }

@@ -27,6 +27,7 @@ export class ListComponent {
   	updateEvent: Event = new Event();
   	showPostForm: boolean = false;
   	showPatchForm: boolean = false;
+  	search: string = "";
 
   	constructor(private http: Http, private router: Router){
   		this.getEvents();
@@ -45,6 +46,7 @@ export class ListComponent {
 		this.showPostForm = true;
 		this.http.post('http://localhost:9393/events?token=' + window.localStorage.getItem('token'), this.newEvent).subscribe(response => {
 		this.events = response.json()
+		this.showPostForm = false;
 	})
 	
 	}
@@ -53,6 +55,7 @@ export class ListComponent {
 		this.showPatchForm = true;
 		this.http.patch('http://localhost:9393/events/' + this.updateEvent.id, this.updateEvent).subscribe(response => {
 		this.events = response.json()
+		this.showPatchForm = false;
 	})
 	
 	}
@@ -71,11 +74,19 @@ export class ListComponent {
     editEvent(event){
     this.showPatchForm = true;
     this.updateEvent = Object.assign({},event);
+
   }
 
   logout(){
     window.localStorage.clear();
     this.router.navigate(['/login'])
+  }
+
+  searchLocation(){
+  	this.http.post('http://localhost:9393/events/search' + '?token=' + window.localStorage.token, {location: this.search}).subscribe(response => {
+  		this.events = response.json()
+  	})
+  	
   }
 
 

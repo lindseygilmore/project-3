@@ -1,17 +1,18 @@
-* {
-	border: 1px solid black;
-}
-
 #container {
+	background-image: url('http://www.lesondelair.org/wp-content/uploads/2016/01/111.jpg');
+	background-size: cover;
 	height: 700px;
 	width: 375px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	margin: 0 auto;
+	font-family: 'PT Sans', sans-serif;
 }
+
 
 #container h1{
 	margin-top: 50%;
 	margin-bottom: 20%;
+	text-align: center;
 }

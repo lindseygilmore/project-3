@@ -1,5 +1,5 @@
 * {
-	border: 1px solid black;
+	font-family: 'PT Sans', sans-serif;
 }
 
 #container {
@@ -9,17 +9,25 @@
 	align-items: center;
 	flex-direction: column;
 	margin: 0 auto;
+	border: 1px solid lightgrey;
+	background-image: url('http://www.powerpointhintergrund.com/uploads/2017/05/light-blue-gradient-background-light-blue-gradient-png-15.png')
 }
 
 #container h1{
 	margin-top: 10%;
 	margin-bottom: 10%;
+	font-size: 38px;
 }
 
 #header {
 	text-align: left;
 	margin-top: 10px;
 	padding-left: 303px;
+}
+
+img {
+	width: 270;
+	height: 270;
 }
 
 #back {
