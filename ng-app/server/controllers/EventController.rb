@@ -19,6 +19,15 @@ class EventController < ApplicationController
 		Event.all.to_json
 	end
 
+	#fires up search on list page
+	post '/search' do
+		request_body = JSON.parse(request.body.read)
+		events = Event.where("location ilike ?", "%" + request_body["location"] + "%")
+		
+		events.all.to_json
+
+	end
+
 	patch '/:id' do
 		id = params[:id]
 		event = Event.find(id)
