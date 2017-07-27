@@ -19,6 +19,15 @@ class EventController < ApplicationController
 		Event.all.to_json
 	end
 
+	patch '/:id' do
+		id = params[:id]
+		event = Event.find(id)
+		request_body = JSON.parse(request.body.read)
+		event.update_attributes(request_body)
+		event.save
+		Event.all.to_json
+	end
+
 	delete '/:id' do
 		id = params[:id]
 		event = Event.find(id)

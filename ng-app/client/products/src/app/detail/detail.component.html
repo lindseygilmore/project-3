@@ -1,4 +1,13 @@
 <div id='container'>
+  <div id='header'>
+    <button (click)="logout()">Logout</button>
+    <br>
+  </div>
+
+      <div id='back'>
+	<a href='/list'>Back to list</a>
+	</div>
+
 <h1>{{event.name}}</h1>
 <img id='event-detail' src="{{event.image_url}}" width="270" height="270"/>
 <br>
@@ -16,6 +25,11 @@
 <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/29897-200.png' width='20' height='20'/>
 <a href='http://www.ticketmaster.com/search?q={{event.name}}'>Buy tickets</a>
 </div>
+
+
+
 </div>
+
+
 
 

@@ -34,8 +34,12 @@ input {
 	margin-bottom: 35px;
 }
 
-#header a {
+#header {
 	text-align: left;
 	margin-top: 10px;
 	padding-left: 303px;
+}
+
+#new-post {
+	align-item: center;
 }
