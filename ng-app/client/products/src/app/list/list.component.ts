@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Http, Response } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
 
 
@@ -13,6 +13,7 @@ class Event{
   city_id: number;
   image_url: string;
 }
+
 
 @Component({
   selector: 'app-root',
@@ -33,7 +34,6 @@ export class ListComponent {
   		this.getEvents();
   	}
 
-
 	getEvents(){
 		this.http.get('http://localhost:9393/events?token=' + window.localStorage.getItem('token')).subscribe(response => {
 		this.events = response.json()
@@ -47,8 +47,8 @@ export class ListComponent {
 		this.http.post('http://localhost:9393/events?token=' + window.localStorage.getItem('token'), this.newEvent).subscribe(response => {
 		this.events = response.json()
 		this.showPostForm = false;
-	})
-	
+
+		})
 	}
 
 	patchEvent(){
@@ -56,39 +56,36 @@ export class ListComponent {
 		this.http.patch('http://localhost:9393/events/' + this.updateEvent.id, this.updateEvent).subscribe(response => {
 		this.events = response.json()
 		this.showPatchForm = false;
-	})
-	
+		
+		})
 	}
 
 	deleteEvent(event){
 	    this.http.delete('http://localhost:9393/events/' + event.id).subscribe(response => {
-	      this.events = response.json()
+	    this.events = response.json()
+	    
 	    })
-
 	}
 
 	goToEvent(event){
-    this.router.navigate(['/events/', event.id])
-  }
+    	this.router.navigate(['/events/', event.id])
+  	}
 
     editEvent(event){
-    this.showPatchForm = true;
-    this.updateEvent = Object.assign({},event);
+	    this.showPatchForm = true;
+	    this.updateEvent = Object.assign({},event);
+	}
 
-  }
+  	logout(){
+	    window.localStorage.clear();
+	    this.router.navigate(['/login'])
+  	}
 
-  logout(){
-    window.localStorage.clear();
-    this.router.navigate(['/login'])
-  }
-
-  searchLocation(){
-  	this.http.post('http://localhost:9393/events/search' + '?token=' + window.localStorage.token, {location: this.search}).subscribe(response => {
+  	searchLocation(){
+  		this.http.post('http://localhost:9393/events/search' + '?token=' + window.localStorage.token, {location: this.search}).subscribe(response => {
   		this.events = response.json()
-  	})
-  	
-  }
-
+  		})
+  	}
 
 }
 

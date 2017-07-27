@@ -24,4 +24,5 @@ class UserController < ApplicationController
       "ACCESS DENIED"
     end
   end
+  
 end

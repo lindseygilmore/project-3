@@ -2,15 +2,16 @@ import { Component } from '@angular/core';
 import { Http, Response} from '@angular/http';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 
-export class RegisterComponent {
 
-	 user = {};
+export class RegisterComponent {
+	user = {};
 
   	constructor(private http: Http, private router: Router){
  
@@ -24,6 +25,7 @@ export class RegisterComponent {
 
     })
   }
+  
 }
 
 
