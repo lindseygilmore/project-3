@@ -53,7 +53,7 @@ export class ListComponent {
 
 	patchEvent(){
 		this.showPatchForm = true;
-		this.http.patch('http://localhost:9393/events/' + this.updateEvent.id, this.updateEvent).subscribe(response => {
+		this.http.patch('http://localhost:9393/events/' + this.updateEvent.id + '?token=' + window.localStorage.getItem('token'), this.updateEvent).subscribe(response => {
 		this.events = response.json()
 		this.showPatchForm = false;
 		

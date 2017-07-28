@@ -27,9 +27,11 @@ h1, h2 {
 
 
 #new-post-container {
-	margin: 0 auto;
 	padding-bottom: 10px;
+	margin-left: 30px;
 }
+
+
 
 
 #change-post-container{
