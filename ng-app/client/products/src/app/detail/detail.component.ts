@@ -38,7 +38,7 @@ export class DetailComponent implements OnInit {
 
 
   getEvent(id){
-    this.http.get('http://localhost:9393/events/' + id).subscribe(response => {
+    this.http.get('http://localhost:9393/events/' + id + '?token=' + window.localStorage.getItem('token')).subscribe(response => {
       this.event = response.json()
     })
   }
