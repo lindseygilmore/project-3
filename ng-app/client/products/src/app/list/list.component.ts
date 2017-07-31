@@ -61,7 +61,7 @@ export class ListComponent {
 	}
 
 	deleteEvent(event){
-	    this.http.delete('http://localhost:9393/events/' + event.id).subscribe(response => {
+	    this.http.delete('http://localhost:9393/events/' + event.id + '?token=' + window.localStorage.getItem('token')).subscribe(response => {
 	    this.events = response.json()
 	    
 	    })
