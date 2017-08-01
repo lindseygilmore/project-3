@@ -55,7 +55,7 @@ In new terminal window: start client -> cd into client folder and run npm instal
 
 ### Link to hosted app
 
- * [Event App](<heroku link>)
+ * [Eventertain](https://eventertain.herokuapp.com/login)
 
 ### Planning
 
