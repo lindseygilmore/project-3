@@ -56,7 +56,7 @@ In new terminal window: start client -> cd into client folder and run npm instal
 ### Link to hosted app
 
  * [Eventertain](<https://eventertain.herokuapp.com/login>)
- Test the app by logging in with these test credentials:
+ * Test the app by logging in with these test credentials:
  	* Username: test123@test.com
  	* Password: test
 
