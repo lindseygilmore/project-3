@@ -17,7 +17,7 @@ export class LoginComponent {
   }
 
   login(){
-    this.http.post('http://localhost:9393/users/login', this.user).subscribe(response => {
+    this.http.post('https://eventertain.herokuapp.com/users/login', this.user).subscribe(response => {
       window.localStorage.setItem("token",response.json().token)
       console.log(response.json().token)
       this.router.navigate(['/list'])

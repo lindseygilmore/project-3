@@ -18,7 +18,7 @@ export class RegisterComponent {
   	}
 
 	register(){
-    this.http.post('http://localhost:9393/users/register', this.user).subscribe(response => {
+    this.http.post('https://eventertain.herokuapp.com/users/register', this.user).subscribe(response => {
       window.localStorage.setItem("token",response.json().token)
       console.log(response.json().token)
       this.router.navigate(['/login'])

@@ -35,7 +35,7 @@ export class ListComponent {
   	}
 
 	getEvents(){
-		this.http.get('http://localhost:9393/events?token=' + window.localStorage.getItem('token')).subscribe(response => {
+		this.http.get('https://eventertain.herokuapp.com/events?token=' + window.localStorage.getItem('token')).subscribe(response => {
 		this.events = response.json()
 		console.log(this.events)
 
@@ -44,7 +44,7 @@ export class ListComponent {
 
 	postEvent(){
 		this.showPostForm = true;
-		this.http.post('http://localhost:9393/events?token=' + window.localStorage.getItem('token'), this.newEvent).subscribe(response => {
+		this.http.post('https://eventertain.herokuapp.com/events?token=' + window.localStorage.getItem('token'), this.newEvent).subscribe(response => {
 		this.events = response.json()
 		this.showPostForm = false;
 
@@ -53,7 +53,7 @@ export class ListComponent {
 
 	patchEvent(){
 		this.showPatchForm = true;
-		this.http.patch('http://localhost:9393/events/' + this.updateEvent.id + '?token=' + window.localStorage.getItem('token'), this.updateEvent).subscribe(response => {
+		this.http.patch('https://eventertain.herokuapp.com/events/' + this.updateEvent.id + '?token=' + window.localStorage.getItem('token'), this.updateEvent).subscribe(response => {
 		this.events = response.json()
 		this.showPatchForm = false;
 		
@@ -61,7 +61,7 @@ export class ListComponent {
 	}
 
 	deleteEvent(event){
-	    this.http.delete('http://localhost:9393/events/' + event.id + '?token=' + window.localStorage.getItem('token')).subscribe(response => {
+	    this.http.delete('https://eventertain.herokuapp.com/events/' + event.id + '?token=' + window.localStorage.getItem('token')).subscribe(response => {
 	    this.events = response.json()
 	    
 	    })
@@ -82,7 +82,7 @@ export class ListComponent {
   	}
 
   	searchLocation(){
-  		this.http.post('http://localhost:9393/events/search' + '?token=' + window.localStorage.token, {location: this.search}).subscribe(response => {
+  		this.http.post('https://eventertain.herokuapp.com/events/search' + '?token=' + window.localStorage.token, {location: this.search}).subscribe(response => {
   		this.events = response.json()
   		})
   	}
